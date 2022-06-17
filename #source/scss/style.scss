@@ -404,19 +404,13 @@
 	}
 
 	&__item {
-		padding: 0 0 35px 103px;
-		background: url('/img/icon/location.svg') no-repeat;
+		display: flex;
+		padding: 0 0 0 40px;
 		margin: 0 10px 0 0;
-		&_hours{
-			padding: 0 0 35px 103px;
-			background: url('/img/icon/еime.svg') no-repeat;
-			margin: 0 10px 0 0;
-		}
-		&_reservation{
-			padding: 0 0 35px 103px;
-			background: url('/img/icon/reservation.svg') no-repeat;
-			margin: 0 10px 0 0;
-		}
+	}
+	
+	&__img{
+		margin: 0 20px 0 0;
 	}
 
 	&__title {
@@ -504,6 +498,17 @@
 
 	&__subrow {
 		display: flex;
+		&_s {
+			flex-direction: column;
+		}
+	}
+
+	&__sign {
+		position: relative;
+		top: -50;
+		left: 0;
+		height: 50%;
+		width: 50%;
 	}
 
 	&__subcolumn {
@@ -536,7 +541,6 @@
 		line-height: 30px;
 		color: #555555;
 		padding: 0 200px 130px 0;
-		background: url('/img/photos/sign.png') no-repeat left bottom;
 	}
 
 	@media (max-width:1140px){
@@ -1402,7 +1406,7 @@
 	&__item {
 		width: 243px;
 		height: 235px;
-		padding: 120px 33px 40px 32px;
+		padding: 50px 33px 40px 32px;
 		margin: 0 15px 0 0;
 		border: 20px solid #323841;
 		font-family: 'Cormorant Infant';
@@ -1414,7 +1418,7 @@
 		&_m {
 			width: 243px;
 			height: 235px;
-			padding: 120px 23px 40px 24px;
+			padding: 50px 23px 40px 24px;
 			margin: 0 15px 0 15px;
 			border: 20px solid #323841;
 			font-family: 'Cormorant Infant';
@@ -1428,7 +1432,7 @@
 		&_d {
 			width: 243px;
 			height: 235px;
-			padding: 120px 20px 40px 21px;
+			padding: 50px 20px 40px 21px;
 			margin: 0 0 0 15px;
 			border: 20px solid #323841;
 			font-family: 'Cormorant Infant';
