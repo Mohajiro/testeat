@@ -460,20 +460,27 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 80px;
   }
   .main-page .main-page__text {
-    margin: 20px 20px 20px 0px;
+    margin: 20px 0px 20px 0px;
   }
   .main-page .main-page__btn {
     margin: 0 0 20px 0;
   }
 }
 @media (max-width: 930px) {
+  .main-page .main-page__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
   .main-page .main-page__subtitle {
     margin: 40px 0 0 0;
     font-size: 50px;
     line-height: 60px;
-  }
-  .main-page .main-page__btn {
-    margin: 0 0 20px 0;
   }
   .main-page .main-page__img {
     padding: 0 0 110% 0;
@@ -482,17 +489,51 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 @media (max-width: 800px) {
+  .main-page .main-page__column {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 320px;
+            flex: 1 1 320px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-page .main-page__subtitle {
+    margin: 30px 0 0 0;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .main-page .main-page__text {
+    font-size: 16px;
+    margin: 20px 20px 20px 0;
+  }
   .main-page .main-page__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin: 10px 15% 10px 15%;
+    margin: 10px 10px 10px 0px;
   }
   .main-page .main-page__img {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
+    padding: 0 0 100% 0;
+  }
+  .main-page .main-page__img img {
+    -o-object-position: top;
+       object-position: top;
+  }
+  .main-page .main-page__btn {
+    display: block;
+    text-align: center;
+    margin: 0 20px 0 0;
   }
 }
 
@@ -537,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 60px 40px 40px 40px;
   }
   .presentation__item {
-    padding: 0 0 40px 103px;
+    padding: 0 0 40px 40px;
   }
   .presentation__title {
     font-family: "Cormorant Infant";
@@ -554,13 +595,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 930px) {
   .presentation__row {
+    display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 60px 40px 0px 40px;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    text-align: left;
+  }
+  .presentation__item {
+    padding: 0 0 40px 0px;
   }
   .presentation__title {
     font-family: "Cormorant Infant";
@@ -647,7 +694,28 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   line-height: 30px;
   color: #555555;
-  padding: 0 200px 130px 0;
+  padding: 0 20px 20px 0;
+}
+.story__img_s {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 0 0 10% 0;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  margin: 0 0 0 -40%;
+}
+.story__img_s img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 1140px) {
   .story .story__title {
@@ -661,7 +729,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 930px) {
   .story .story__row {
-    margin: 40px 20px 40px 20px;
+    margin: 30px 20px 30px 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -811,7 +879,10 @@ h1, h2, h3, h4, h5, h6 {
             flex-direction: column;
   }
   .carte__btn {
-    margin: 20px auto 0 auto;
+    margin: 20px auto 20px auto;
+  }
+  .carte__title_subcolumn {
+    margin: 20px 0px 0px 0;
   }
 }
 
@@ -864,7 +935,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1100px) {
   .item .item {
-    padding: 20px 0;
+    padding: 10px 0;
   }
   .item .item__column {
     display: -webkit-box;
@@ -998,7 +1069,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 1100px) {
   .slider .slider {
-    padding: 60px 40px 60px 40px;
+    padding: 60px 20px 40px 20px;
   }
 }
 
@@ -1024,20 +1095,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .offers {
   margin: 140px 0px 120px 0px;
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  max-width: 1680px;
 }
 .offers__title {
   font-family: "Josefin Sans";
@@ -1085,6 +1143,7 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 100%;
 }
 .offers__card {
   -webkit-box-flex: 0;
@@ -1095,11 +1154,23 @@ h1, h2, h3, h4, h5, h6 {
   .offers.offers {
     margin: 40px 0px 40px 0px;
   }
+  .offers__text {
+    margin: 0 10% 20px 10%;
+  }
   .offers__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -1113,13 +1184,13 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("/img/offers/burgerbg.png") no-repeat;
+  background: url("../img/offers/burgerbg.png") no-repeat;
   margin: 0 15px 0 40px;
   background-size: cover;
   padding: 67px 40px 45px 15px;
 }
 .card_p {
-  background: url("/img/offers/pizzabg.png") no-repeat;
+  background: url("../img/offers/pizzabg.png");
   margin: 0 40px 0 15px;
   background-size: cover;
   padding: 67px 40px 45px 15px;
@@ -1151,7 +1222,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 66px;
   letter-spacing: 0.2px;
   color: #FFF;
-  background: url("/img/offers/pizzaprice.png") no-repeat left/contain;
+  background: url("../img/offers/pizzaprice.png") no-repeat left/contain;
 }
 .card__price_b {
   font-family: "Cormorant Infant";
@@ -1159,7 +1230,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 66px;
   letter-spacing: 0.2px;
   color: #292E36;
-  background: url("/img/offers/burgerprice.png") no-repeat left/contain;
+  background: url("../img/offers/burgerprice.png") no-repeat left/contain;
 }
 .card__title {
   font-family: "Josefin Sans";
@@ -1205,6 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   height: 100%;
   width: 100%;
+  min-width: 100px;
   top: 0;
   left: 0;
   -o-object-fit: contain;
@@ -1541,7 +1613,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.2px;
-  background: url("/img/services/time.png") no-repeat 50% 35%;
 }
 .services__item_m {
   width: 243px;
@@ -1554,7 +1625,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.2px;
-  background: url("/img/services/menu.png") no-repeat 50% 35%;
 }
 .services__item_d {
   width: 243px;
@@ -1567,7 +1637,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 35px;
   text-align: center;
   letter-spacing: 0.2px;
-  background: url("/img/services/delivery.png") no-repeat 50% 35%;
 }
 @media (max-width: 1100px) {
   .services .services__row {
@@ -1858,7 +1927,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form {
-  background: url("/img/photos/formbg.png") no-repeat;
+  background: url("../img/photos/formbg.png") no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;

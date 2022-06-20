@@ -348,7 +348,7 @@
 			}
 		
 			&__text {
-				margin: 20px 20px 20px 0px;
+				margin: 20px 0px 20px 0px;
 			}
 	
 			&__btn {
@@ -360,15 +360,18 @@
 	@media (max-width:930px){
 	
 		.main-page {
+			&__row{
+				display: flex;
+				justify-content: center;
+				align-content: center;
+			}
+
 			&__subtitle {
 				margin: 40px 0 0 0;
 				font-size: 50px;
 				line-height: 60px;
 			}
 			
-			&__btn {
-				margin: 0 0 20px 0;
-			}
 		
 			&__img {
 				padding: 0 0 110% 0;
@@ -380,13 +383,41 @@
 	@media (max-width:800px){
 	
 		.main-page {
+			&__column {
+				flex: 1 1 320px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			&__subtitle {
+				margin: 30px 0 0 0;
+				font-size: 40px;
+				line-height: 50px;
+			}
+
+			&__text {
+				font-size: 16px;
+				margin: 20px 20px 20px 0;
+			}
+
 			&__row{
 				flex-direction: column-reverse;
-				margin: 10px 15% 10px 15%;
+				margin: 10px 10px 10px 0px;
 			}
 	
 			&__img{
 				order: 1;
+				padding: 0 0 100% 0;
+				img {
+					object-position: top;
+				}
+			}
+
+			&__btn {
+				display: block;
+				text-align: center;
+				margin: 0 20px 0 0;
 			}
 		}
 	}
@@ -433,7 +464,7 @@
 		}
 
 		&__item{
-			padding: 0 0 40px 103px;
+			padding: 0 0 40px 40px;
 		}
 
 		&__title {
@@ -453,10 +484,15 @@
 	
 	@media (max-width:930px){
 		&__row {
+			display: block;
 			flex-direction: column;
 			margin: 60px 40px 0px 40px;
-			justify-content: space-around;
-			
+			justify-content: left;
+			text-align: left;
+		}
+
+		&__item{
+			padding: 0 0 40px 0px;
 		}
 
 		&__title {
@@ -540,7 +576,26 @@
 		font-size: 20px;
 		line-height: 30px;
 		color: #555555;
-		padding: 0 200px 130px 0;
+		padding: 0 20px 20px 0;
+	}
+
+	&__img_s {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		padding: 0 0 10% 0;
+		align-items: left;
+		margin: 0 0 0 -40%;
+			img{
+			object-fit: contain;
+			position: absolute;
+			height: 100%;
+			width: 100%;	
+			top: 0;
+			left: 0;
+		}
 	}
 
 	@media (max-width:1140px){
@@ -560,7 +615,7 @@
 	@media (max-width:930px){
 		.story{
 			&__row{
-				margin: 40px 20px 40px 20px;
+				margin: 30px 20px 30px 20px;
 				flex-direction: column;
 			}
 
@@ -706,7 +761,11 @@
 		}
 
 		&__btn{
-			margin: 20px auto 0 auto;
+			margin: 20px auto 20px auto;
+		}
+
+		&__title_subcolumn {
+			margin: 20px 0px 00px 0;
 		}
 	}
 }
@@ -754,7 +813,7 @@
 
 	@media(max-width:1100px) {
 			.item{
-			padding: 20px 0;
+			padding: 10px 0;
 			&__column {
 				display: flex;
 				flex: 0 1 80%;
@@ -894,7 +953,7 @@
 
 	@media(max-width:1100px){
 		.slider {
-			padding: 60px 40px 60px 40px;
+			padding: 60px 20px 40px 20px;
 		}
 		
 	}
@@ -924,11 +983,7 @@
 
 .offers {
 	margin: 140px 0px 120px 0px;
-	max-width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	max-width: 1680px;
 	&__title {
 		font-family: 'Josefin Sans';
 		font-size: 15px;
@@ -976,6 +1031,7 @@
 
 	&__row {
 		display: flex;
+		max-width: 100%;
 	}
 
 	&__card {	
@@ -987,8 +1043,15 @@
 				margin: 40px 0px 40px 0px;
 			}
 
+			&__text {
+				margin: 0 10% 20px 10%;
+			}
+
 			&__row {
+				display: flex;
 				flex-direction: column;
+				justify-content: center;
+				align-items: center;
 			}
 	}
 }
@@ -997,13 +1060,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: url("/img/offers/burgerbg.png") no-repeat ;
+	background: url('../img/offers/burgerbg.png') no-repeat;
 	margin: 0 15px 0 40px;
 	background-size: cover;
 	padding: 67px 40px 45px 15px;
 
 	&_p {
-		background: url("/img/offers/pizzabg.png") no-repeat ;
+		background: url("../img/offers/pizzabg.png");
 		margin: 0 40px 0 15px;
 		background-size: cover;
 		padding: 67px 40px 45px 15px;
@@ -1036,14 +1099,14 @@
 		line-height: 66px;
 		letter-spacing: 0.2px;
 		color: #FFF;		
-		background: url("/img/offers/pizzaprice.png") no-repeat left/contain;
+		background: url('../img/offers/pizzaprice.png') no-repeat left/contain;
 		&_b {
 			font-family: 'Cormorant Infant';
 			font-size: 60px;
 			line-height: 66px;
 			letter-spacing: 0.2px;
 			color: #292E36;
-			background: url("/img/offers/burgerprice.png") no-repeat left/contain;
+			background: url('../img/offers/burgerprice.png') no-repeat left/contain;
 		}
 	}
 
@@ -1094,6 +1157,7 @@
 		position: relative;
 		height: 100%;
 		width: 100%;
+		min-width: 100px;
 		top: 0;
 		left: 0;	
 		object-fit: contain;
@@ -1414,7 +1478,6 @@
 		line-height: 35px;
 		text-align: center;
 		letter-spacing: 0.2px;
-		background: url("/img/services/time.png") no-repeat 50% 35%;
 		&_m {
 			width: 243px;
 			height: 235px;
@@ -1426,7 +1489,6 @@
 			line-height: 35px;
 			text-align: center;
 			letter-spacing: 0.2px;
-			background: url("/img/services/menu.png") no-repeat 50% 35%;
 		}
 
 		&_d {
@@ -1440,7 +1502,6 @@
 			line-height: 35px;
 			text-align: center;
 			letter-spacing: 0.2px;
-			background: url("/img/services/delivery.png") no-repeat 50% 35%;
 		}
 	}
 
@@ -1740,7 +1801,7 @@
 }
 
 .form {
-	background: url("/img/photos/formbg.png") no-repeat;
+	background: url("../img/photos/formbg.png") no-repeat;
 	background-size: cover;
 	height: 100%;
 	width: 100%;
